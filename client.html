@@ -19,9 +19,12 @@
     // on every message recived we print the new datas inside the #container div
     socket.on('notification', function (data) {
         // convert the json string into a valid javascript object
-        var _data = JSON.parse(data);
-
-        $('#container').html(_data.test.sample);
+       // console.log(data);
+        $(data).each(function (key, val) {
+            console.log(val);
+        })
+        //var _data = JSON.parse(data);
+        //$('#container').html(_data.test.sample);
         $('time').html('Last Update:' + new Date());
     });
 </script>
