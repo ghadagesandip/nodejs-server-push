@@ -18,7 +18,7 @@ function handler(req, res) {
             res.writeHead(500);
             return res.end('Error loading client.html');
         }
-        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Content-Type', 'text/plain');
         res.writeHead(200);
         res.end(data);
     });
